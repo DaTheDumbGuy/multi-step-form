@@ -2,16 +2,24 @@ import ArcadeIcon from "../../assets/images/icon-arcade.svg";
 import AdvancedIcon from "../../assets/images/icon-advanced.svg";
 import ProIcon from "../../assets/images/icon-pro.svg";
 import { FormsProps } from "../../types/types";
+import './test.scss';
+import { useState } from "react";
+import { handleSubmit } from "../../utils/handleSubmit";
 
 export default function SelectPlan({nextStep, updateFormValues}: FormsProps) {
-  console.log(nextStep, updateFormValues);
+
+  const [isYearly, setIsYearly] = useState(false);
+
+  const handleToggle = () => {
+    setIsYearly(!isYearly);
+  };
   return (
     <>
       <header>
         <h1>Personal Info</h1>
         <p>Please provide your name, email address, and phone number</p>
       </header>
-      <form className="pricing-plan">
+      <form className="pricing-plan" onSubmit={handleSubmit(nextStep, updateFormValues)}>
         <label className="plan">
           <input type="radio" name="plan" value="arcade" hidden />
           <div className="plan__content">
@@ -43,12 +51,24 @@ export default function SelectPlan({nextStep, updateFormValues}: FormsProps) {
           </div>
         </label>
         <div className="toggle">
-          <label>
-            <span>Monthly</span>
-            <input type="checkbox" />
-            <span>Yearly</span>
-          </label>
-        </div>
+      <span>Monthly</span>
+      <button 
+        type="button" 
+        className="testButton" 
+        onClick={handleToggle}
+        aria-label={`Switch to ${isYearly ? "monthly" : "yearly"} plan`}
+      >
+        <div className={`circle ${isYearly ? "yearly" : "monthly"}`}></div>
+      </button>
+      <input 
+        type="hidden" 
+        name="subscription" 
+        value={isYearly ? "yearly" : "monthly"} 
+        readOnly 
+      />
+      <span>Yearly</span>
+    </div>
+        <button type="submit">Submit</button>
       </form>
     </>
   );
