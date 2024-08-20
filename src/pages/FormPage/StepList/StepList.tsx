@@ -1,10 +1,6 @@
+import { CurrentStep } from "../../../types/types";
 
-interface currentStep {
-    currentStep: number;
-}
-
-
-export default function StepList({ currentStep } : currentStep) {
+export default function StepList({ currentStep } : { currentStep: CurrentStep }) {
   const steps = [
     { number: 1, title: "Step 1", description: "Your Info" },
     { number: 2, title: "Step 2", description: "Select Plan" },

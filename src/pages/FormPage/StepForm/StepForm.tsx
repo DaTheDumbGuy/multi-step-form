@@ -1,17 +1,15 @@
 import PersonalInfoForm from "../../../components/PersonalInfoForm/PersonalInfoForm";
+import SelectPlan from "../../../components/SelectPlan/SelectPlan";
+import { StepFormProps, RenderForm } from "../../../types/types";
 
-interface stepForm  {
-  currentStep: number;
-  nextStep: ()=> void ;
-}
-type renderForm = JSX.Element | null;
-export default function StepForm({ currentStep, nextStep }:stepForm) {
-  const renderForm = ():renderForm => {
+
+export default function StepForm({ currentStep, nextStep, updateFormValues }:StepFormProps) {
+  const renderForm = ():RenderForm => {
     switch (currentStep) {
       case 1:
-        return <PersonalInfoForm nextStep={nextStep}/>;
+        return <PersonalInfoForm nextStep={nextStep} updateFormValues={updateFormValues}/>;
       case 2:
-        // return console.log("Step 2");
+        return <SelectPlan nextStep={nextStep}/>;
       case 3:
         // return alert("Step 3");
       case 4:
