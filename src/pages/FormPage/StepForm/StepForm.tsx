@@ -9,7 +9,7 @@ export default function StepForm({ currentStep, nextStep, updateFormValues }:Ste
       case 1:
         return <PersonalInfoForm nextStep={nextStep} updateFormValues={updateFormValues}/>;
       case 2:
-        return <SelectPlan nextStep={nextStep}/>;
+        return <SelectPlan nextStep={nextStep} updateFormValues={updateFormValues}/>;
       case 3:
         // return alert("Step 3");
       case 4:
