@@ -1,0 +1,45 @@
+main
+ article(For the Container)
+  -section(steps)
+  -section(form)
+
+Step 1
+ -section(steps) - image[in styles]
+  -ul
+   -li - if phone ? div(display:none) : div(display:block)
+    -button(numbers)
+    -div(step/description)
+     -h2(step)
+     -p(description)
+   -li - if phone ? div(display:none) : div(display:block)
+    -button(numbers)
+    -div(step/description)
+     -h2(step)
+     -p(description)
+   -li - if phone ? div(display:none) : div(display:block)
+    -button(numbers)
+    -div(step/description)
+     -h2(step)
+     -p(description)
+   -li - if phone ? div(display:none) : div(display:block)
+    -button(numbers)
+    -div(step/description)
+     -h2(step)
+     -p(description)
+
+ -section(form)
+  -header(title/description)
+   -h1(title)
+   -p(description)
+  -form(inputs/button)
+   -div
+    -label
+    -input
+   -div
+    -label
+    -input
+   -div
+    -label
+    -input
+   -button(nex step)
+ 
