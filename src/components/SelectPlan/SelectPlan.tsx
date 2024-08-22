@@ -13,13 +13,20 @@ export default function SelectPlan({nextStep, updateFormValues}: FormsProps) {
   const handleToggle = () => {
     setIsYearly(!isYearly);
   };
+  const submitHandler = handleSubmit({
+    updateFormValues,
+    onSuccess: () => {
+        // Call nextStep after updating form values
+        nextStep();
+    }
+});
   return (
     <>
       <header>
         <h1>Personal Info</h1>
         <p>Please provide your name, email address, and phone number</p>
       </header>
-      <form className="pricing-plan" onSubmit={handleSubmit(nextStep, updateFormValues)}>
+      <form className="pricing-plan" onSubmit={submitHandler}>
         <label className="plan">
           <input type="radio" name="plan" value="arcade" hidden />
           <div className="plan__content">

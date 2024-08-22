@@ -43,3 +43,13 @@ Step 1
     -input
    -button(nex step)
  
+Step 2
+ -section(step 2)
+  ...
+ -section
+  -header(title/description)
+   -h1(title)
+   -p(description)
+  -form
+   -label(Icon/Arcade/Price)
+   -input(hidden)
