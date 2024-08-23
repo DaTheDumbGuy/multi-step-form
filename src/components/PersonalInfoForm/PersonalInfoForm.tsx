@@ -1,5 +1,6 @@
 import { handleSubmit } from "../../utils/handleSubmit";
 import { FormsProps } from "../../types/types";
+import FormHeader from "../Ui/FormHeader/FormHeader";
 
 export default function PersonalInfoForm({ nextStep, updateFormValues }: FormsProps) {
     // Define the submit handler
@@ -13,10 +14,10 @@ export default function PersonalInfoForm({ nextStep, updateFormValues }: FormsPr
 
     return (
         <>
-            <header>
-                <h1>Personal Info</h1>
-                <p>Please provide your name, email address, and phone number</p>
-            </header>
+            <FormHeader
+                title="Personal info"
+                description="Please provide your name, email address, and phone number."
+            />
 
             <form onSubmit={submitHandler}>
                 <div>

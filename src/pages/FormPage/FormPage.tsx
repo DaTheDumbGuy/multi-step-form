@@ -28,13 +28,13 @@ export default function FormPage() {
     console.log(formValues);
 
     return (
-        <main>
+        <>
             <StepList currentStep={currentStep} />
             <StepForm 
                 currentStep={currentStep} 
                 nextStep={nextStep} 
                 updateFormValues={updateFormValues}
             />
-        </main>
+        </>
     );
 }

@@ -5,6 +5,7 @@ import { FormsProps } from "../../types/types";
 import './test.scss';
 import { useState } from "react";
 import { handleSubmit } from "../../utils/handleSubmit";
+import FormHeader from "../Ui/FormHeader/FormHeader";
 
 export default function SelectPlan({nextStep, updateFormValues}: FormsProps) {
 
@@ -22,10 +23,10 @@ export default function SelectPlan({nextStep, updateFormValues}: FormsProps) {
 });
   return (
     <>
-      <header>
-        <h1>Personal Info</h1>
-        <p>Please provide your name, email address, and phone number</p>
-      </header>
+      <FormHeader
+        title="Select your plan"
+        description="You have the option of monthly or yearly billing."
+      />
       <form className="pricing-plan" onSubmit={submitHandler}>
         <label className="plan">
           <input type="radio" name="plan" value="arcade" hidden />

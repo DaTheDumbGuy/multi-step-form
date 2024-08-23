@@ -1,3 +1,4 @@
+import AddOns from "../../../components/AddsOns/AddsOns";
 import PersonalInfoForm from "../../../components/PersonalInfoForm/PersonalInfoForm";
 import SelectPlan from "../../../components/SelectPlan/SelectPlan";
 import { StepFormProps, RenderForm } from "../../../types/types";
@@ -11,7 +12,7 @@ export default function StepForm({ currentStep, nextStep, updateFormValues }:Ste
       case 2:
         return <SelectPlan nextStep={nextStep} updateFormValues={updateFormValues}/>;
       case 3:
-        // return alert("Step 3");
+        return <AddOns nextStep={nextStep} updateFormValues={updateFormValues}/>;
       case 4:
         // return alert("Step 4");
       default:
