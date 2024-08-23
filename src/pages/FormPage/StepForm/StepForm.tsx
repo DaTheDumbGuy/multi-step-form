@@ -1,4 +1,4 @@
-import AddOns from "../../../components/AddsOns/AddsOns";
+import AddOns from "../../../components/AddOns/AddOns";
 import PersonalInfoForm from "../../../components/PersonalInfoForm/PersonalInfoForm";
 import SelectPlan from "../../../components/SelectPlan/SelectPlan";
 import { StepFormProps, RenderForm } from "../../../types/types";
