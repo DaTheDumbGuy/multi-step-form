@@ -21,11 +21,13 @@ export default function FinishingUp({nextStep, updateFormValues}: FormsProps){
                 description="Double-check everything looks OK before confirming."
             />
 
-            <form onSubmit={submitHandler}>
-                <div>
-                    <h2>{formValues[1]?.plan}</h2>
-                </div>
-            </form>
+<form onSubmit={submitHandler}>
+    <div>
+        <h2>Plan: {formValues[1]?.plan || "No plan selected"}</h2>
+        <p>Subscription: {formValues[1]?.subscription || "No subscription selected"}</p>
+    </div>
+</form>
+
         </>
     )
 }
