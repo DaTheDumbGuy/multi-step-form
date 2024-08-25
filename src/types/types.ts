@@ -25,20 +25,26 @@ export interface FormsProps {
 // JSX element or null type
 export type RenderForm = JSX.Element | null;
 // Assuming FormData represents a single step in the form process
-export type PersonalInformation = {
+
+type PersonalInformation = {
     name: string;
     email: string;
     phoneNumber: string;
 };
 
-export type Plan = {
+type Plan = {
     plan: string;
     subscription: string;
 };
-
+type AddOns = {
+    online_service:string;
+    larger_storage:string;
+    customizable_profile:string;
+} 
 export interface FormData {
     personalInformation: PersonalInformation;
-    plan?: Plan; // Optional if not all steps include this
+    plan: Plan; // Optional if not all steps include this
+    addOns: AddOns;
 }
 
 // Context type for managing form data

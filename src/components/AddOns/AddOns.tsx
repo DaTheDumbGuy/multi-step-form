@@ -1,6 +1,7 @@
 import { FormsProps } from "../../types/types";
 import { handleSubmit } from "../../utils/handleSubmit";
 import FormHeader from "../Ui/FormHeader/FormHeader";
+import AddOnOption from "./AddOnOption/AddOnOption";
 
 export default function AddOns({nextStep, updateFormValues}: FormsProps){
     const submitHandler = handleSubmit({
@@ -25,24 +26,14 @@ export default function AddOns({nextStep, updateFormValues}: FormsProps){
         <fieldset>
             <legend>Choose your add-ons:</legend>
             {addOns.map((addOn) => (
-                <div key={addOn.value}>
-                    <input
-                        type="radio"
-                        id={addOn.value}
-                        name={addOn.name}
-                        value={addOn.value}
-                    />
-                    <label htmlFor={addOn.value}>
-                        <div>
-                            <h2>{addOn.title}</h2>
-                            <p>{addOn.description}</p>
-                        </div>
-                        <span>{addOn.price}</span>
-                    </label>
-                </div>
+                <AddOnOption key={addOn.value} addOn={addOn}/>
             ))}
+            
         </fieldset>
-        <button type="submit">Next</button>
+        <div>
+            <button type="button">Go Back</button>
+            <button type="submit">Next</button>
+        </div>
     </form>
 </>
 
