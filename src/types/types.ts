@@ -49,6 +49,10 @@ export type FormData = [
 
 // Context type for managing form data
 export interface FormDataContextType {
-    formValues: FormData[]; // Array of FormData for each step
-    setFormValues: React.Dispatch<React.SetStateAction<FormData[]>>;
+    formValues: FormData; // Array of FormData for each step
+    setFormValues: React.Dispatch<React.SetStateAction<FormData>>;
 }
+
+
+export type PlanType = 'arcade' | 'advanced' | 'pro';
+export type SubscriptionType = 'monthly' | 'yearly';
