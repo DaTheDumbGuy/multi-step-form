@@ -4,6 +4,7 @@ import StepForm from "./StepForm/StepForm";
 import { FormDataEntryValue } from "../../types/types";
 import { useFormData } from "../../hooks/FormDataProvider";
 import { FormData } from "../../types/types";
+import styles from './formPage.module.scss';
 
 export default function FormPage() {
     const [currentStep, setCurrentStep] = useState(1);
@@ -34,13 +35,13 @@ export default function FormPage() {
     console.log(formValues);
 
     return (
-        <>
+        <main className={styles['b-formPage']}>
             <StepList currentStep={currentStep} />
             <StepForm 
                 currentStep={currentStep} 
                 nextStep={nextStep} 
                 updateFormValues={updateFormValues}
             />
-        </>
+        </main>
     );
 }

@@ -6,13 +6,11 @@ function App() {
 
   return (
     <FormDataProvider>
-      <main>
       <Router basename="/multi-step-form">
         <Routes>
           <Route path="/" element={<FormPage />} />
         </Routes>
       </Router>
-      </main>
     </FormDataProvider>
   )
 }

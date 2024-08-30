@@ -3,7 +3,7 @@ import FinishingUp from "../../../components/FinishingUp/FinishingUp";
 import PersonalInfoForm from "../../../components/PersonalInfoForm/PersonalInfoForm";
 import SelectPlan from "../../../components/SelectPlan/SelectPlan";
 import { StepFormProps, RenderForm } from "../../../types/types";
-
+import styles from '../formPage.module.scss';
 
 export default function StepForm({ currentStep, nextStep, updateFormValues }:StepFormProps) {
   const renderForm = ():RenderForm => {
@@ -22,7 +22,7 @@ export default function StepForm({ currentStep, nextStep, updateFormValues }:Ste
   };
 
   return (
-    <section>
+    <section className={styles['b-formPage__stepForm']}>
       {renderForm()}
     </section>
   );

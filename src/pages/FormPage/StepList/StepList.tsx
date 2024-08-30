@@ -1,4 +1,5 @@
 import { CurrentStep } from "../../../types/types";
+import styles from '../formPage.module.scss';
 
 export default function StepList({ currentStep } : { currentStep: CurrentStep }) {
   const steps = [
@@ -9,12 +10,12 @@ export default function StepList({ currentStep } : { currentStep: CurrentStep })
   ];
 
   return (
-    <section>
-      <ul>
+    <section className={styles['b-formPage__stepList']}>
+      <ul className={styles['b-formPage__stepList__ul']}>
         {steps.map(step => (
           <li key={step.number}>
             <p className={step.number === currentStep ? 'active' : ''}>{step.number}</p>
-            <div>
+            <div className={styles['b-formPage__stepList__ul__titleDescription']}>
               <h2>{step.title}</h2>
               <p>{step.description}</p>
             </div>
