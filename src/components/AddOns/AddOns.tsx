@@ -1,6 +1,7 @@
 import { FormsProps } from "../../types/types";
 import { handleSubmit } from "../../utils/handleSubmit";
 import FormHeader from "../Ui/FormHeader/FormHeader";
+import SubmitButton from "../Ui/SubmitButton/SubmitButton";
 import AddOnOption from "./AddOnOption/AddOnOption";
 
 export default function AddOns({nextStep, updateFormValues}: FormsProps){
@@ -32,7 +33,7 @@ export default function AddOns({nextStep, updateFormValues}: FormsProps){
         </fieldset>
         <div>
             <button type="button">Go Back</button>
-            <button type="submit">Next</button>
+            <SubmitButton/>
         </div>
     </form>
 </>

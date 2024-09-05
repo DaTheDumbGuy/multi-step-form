@@ -3,9 +3,9 @@
 .b-formPage{
     border:1px solid black;
     background-color:bi.$color-light-gray;
+    min-height: 100vh;
 
     &__stepList{
-        position: relative;
         height:172px;
         width: 100%;
         display:flex;
@@ -38,9 +38,11 @@
     }
 
     &__stepForm{
-        background:red;
+        background-color:bi.$color-alabaster;
+        border-radius:0.5em;
         position: relative;
         top:-75px;
-        padding:1em;
+        padding:1.5em 1.2em;
+        margin:0 1.2em;
     }
 }

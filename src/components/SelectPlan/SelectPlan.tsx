@@ -6,6 +6,7 @@ import './test.scss';
 import { useState } from "react";
 import { handleSubmit } from "../../utils/handleSubmit";
 import FormHeader from "../Ui/FormHeader/FormHeader";
+import SubmitButton from "../Ui/SubmitButton/SubmitButton";
 
 export default function SelectPlan({nextStep, updateFormValues}: FormsProps) {
 
@@ -59,24 +60,24 @@ export default function SelectPlan({nextStep, updateFormValues}: FormsProps) {
           </div>
         </label>
         <div className="toggle">
-      <span>Monthly</span>
-      <button 
-        type="button" 
-        className="testButton" 
-        onClick={handleToggle}
-        aria-label={`Switch to ${isYearly ? "monthly" : "yearly"} plan`}
-      >
-        <div className={`circle ${isYearly ? "yearly" : "monthly"}`}></div>
-      </button>
-      <input 
-        type="hidden" 
-        name="subscription" 
-        value={isYearly ? "yearly" : "monthly"} 
-        readOnly 
-      />
-      <span>Yearly</span>
-    </div>
-        <button type="submit">Submit</button>
+        <span>Monthly</span>
+        <button 
+          type="button" 
+          className="testButton" 
+          onClick={handleToggle}
+          aria-label={`Switch to ${isYearly ? "monthly" : "yearly"} plan`}
+        >
+          <div className={`circle ${isYearly ? "yearly" : "monthly"}`}></div>
+        </button>
+        <input 
+          type="hidden" 
+          name="subscription" 
+          value={isYearly ? "yearly" : "monthly"} 
+          readOnly 
+        />
+        <span>Yearly</span>
+      </div>
+        <SubmitButton/>
       </form>
     </>
   );

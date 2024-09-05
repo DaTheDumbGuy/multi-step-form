@@ -1,0 +1,12 @@
+@use '../../../assets/scss/base/index' as bi;
+.b-formHeader{
+    margin-bottom:0.5em;
+
+    h1{
+        margin-bottom:0.5em;
+        color:bi.$color-marine-blue;
+    }
+    p{
+        color:bi.$color-cool-gray;
+    }
+}

@@ -1,0 +1,19 @@
+@use '../../../assets/scss/base/index' as bi;
+.b-submitButton{
+    position: fixed;
+    bottom:0;
+    right:0;
+    left:0;
+    background:bi.$color-alabaster;
+    padding:1em;
+    display: flex;
+    justify-content: flex-end;
+
+    &__button{
+        padding:0.6rem 0.8rem;
+        border-radius:2px;
+        border:none;
+        background:bi.$color-marine-blue;
+        color:bi.$color-alabaster;
+    }
+}

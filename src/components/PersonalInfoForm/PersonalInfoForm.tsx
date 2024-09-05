@@ -1,6 +1,8 @@
 import { handleSubmit } from "../../utils/handleSubmit";
 import { FormsProps } from "../../types/types";
 import FormHeader from "../Ui/FormHeader/FormHeader";
+import styles from './personalInformation.module.scss';
+import SubmitButton from "../Ui/SubmitButton/SubmitButton";
 
 export default function PersonalInfoForm({ nextStep, updateFormValues }: FormsProps) {
     // Define the submit handler
@@ -19,20 +21,20 @@ export default function PersonalInfoForm({ nextStep, updateFormValues }: FormsPr
                 description="Please provide your name, email address, and phone number."
             />
 
-            <form onSubmit={submitHandler}>
-                <div>
+            <form onSubmit={submitHandler} className={styles['b-personalInfoForm']}>
+                <div className={styles['b-personalInfoForm__inputContainer']}>
                     <label htmlFor="name">Name</label>
                     <input type="text" id="name" name="name" placeholder="e.g Stephen King" />
                 </div>
-                <div>
+                <div className={styles['b-personalInfoForm__inputContainer']}>
                     <label htmlFor="email">Email Address</label>
                     <input type="email" id="email" name="email" placeholder="e.g stephenking@lorem.com" />
                 </div>
-                <div>
+                <div className={styles['b-personalInfoForm__inputContainer']}>
                     <label htmlFor="phone">Phone Number</label>
                     <input type="tel" id="phone" name="phone" placeholder="e.g +1 234 567 890" />
                 </div>
-                <button type="submit">Next</button>
+                <SubmitButton/> 
             </form>
         </>
     );
