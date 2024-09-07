@@ -31,8 +31,8 @@ export default function PersonalInfoForm({ nextStep, updateFormValues }: FormsPr
                     <input type="email" id="email" name="email" placeholder="e.g stephenking@lorem.com" />
                 </div>
                 <div className={styles['b-personalInfoForm__inputContainer']}>
-                    <label htmlFor="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone" placeholder="e.g +1 234 567 890" />
+                    <label htmlFor="phoneNumber">Phone Number</label>
+                    <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="e.g +1 234 567 890" />
                 </div>
                 <SubmitButton/> 
             </form>
