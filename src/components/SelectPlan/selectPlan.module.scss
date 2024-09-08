@@ -1,0 +1,95 @@
+@use '../../assets/scss/base/index' as bi;
+.b-pricePlan {
+  &__plan {
+    &__content {
+      display: flex;
+      align-items: center;
+      padding: 1em;
+      gap: 1em;
+      border: 1px solid black;
+      border-radius: 5px;
+      margin-bottom: 1.5em;
+
+      &__description {
+        // background: white;
+        h2 {
+          font-size: 1.15em;
+        }
+      }
+
+      &.active {
+        border:1.5px solid bi.$color-purplish-blue;
+        background: bi.$color-magnolia ; // This will apply when .active class is toggled
+      }
+    }
+    
+
+  }
+
+  &__subscription{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:1em;
+    background:bi.$color-magnolia;
+    padding:1rem 0;
+    border-radius:15px;
+
+    &__button{
+      background: black;
+      border-radius: 10px;
+      height: 20px;
+      width: 40px;
+      border: none;
+
+      &__circle {
+        height: 15px;
+        width: 15px;
+        background: white;
+        border-radius: 50%;
+        transition: transform 0.3s;
+        transform: translate(0, 0); 
+      
+        &.yearly {
+          transform: translate(20px, 0);
+        }
+    
+        &.monthly {
+          transform: translate(5px, 0);
+        }
+      }   
+    }
+  }
+}
+
+
+
+
+
+
+
+
+
+// .testButton {
+//   background: black;
+//   height: 30px;
+//   width: 60px;
+//   border: none;
+
+//   .circle {
+//     height: 30px;
+//     width: 30px;
+//     background: white;
+//     border-radius: 50%;
+//     transition: transform 0.3s;
+//     transform: translate(0, 0); // Default position
+
+//     &.yearly {
+//       transform: translate(30px, 0);
+//     }
+
+//     &.monthly {
+//       transform: translate(0, 0);
+//     }
+//   }    
+// }
