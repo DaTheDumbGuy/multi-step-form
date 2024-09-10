@@ -89,7 +89,7 @@ console.log(styles);
         </label>
 
         <div className={styles['b-pricePlan__subscription']}>
-          <span>Monthly</span>
+          <span className={`${isYearly ? "" : styles["b-pricePlan__subscription_selected"]}`}>Monthly</span>
           <button 
             type="button" 
             className={styles['b-pricePlan__subscription__button']}
@@ -104,7 +104,7 @@ console.log(styles);
             value={isYearly ? "yearly" : "monthly"} 
             readOnly 
           />
-          <span>Yearly</span>
+          <span className={`${!isYearly ? "" : styles["b-pricePlan__subscription_selected"]}`}>Yearly</span>
         </div>
 
         <SubmitButton />
